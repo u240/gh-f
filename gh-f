@@ -250,7 +250,7 @@ prs() {
 
 		lines="$(
 			echo "$open_prs" | awk -F'\t' -v ID_COLOUR="$ID_COLOUR" -v TEXT_COLOUR="$TEXT_COLOUR" -v SHELL_COLOUR="$SHELL_COLOUR" \
-				'{print ID_COLOUR $1 SHELL_COLOUR": " TEXT_COLOUR $3}' |
+				'{print ID_COLOUR $1 SHELL_COLOUR": " TEXT_COLOUR $2}' |
 				fzf -d' ' \
 					--exit-0 \
 					--ansi --delimiter=: \
